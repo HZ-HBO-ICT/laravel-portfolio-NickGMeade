@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class DashboardController
+class DashboardController extends Controller
 {
-    public function show() {
+    /**
+     * Show the dashboard.blade.php page when called
+     */
+    public function show()
+    {
         return view('dashboard');
     }
 }

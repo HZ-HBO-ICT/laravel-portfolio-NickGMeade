@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class BlogController
+class BlogController extends Controller
 {
-    public function show() {
+    /**
+     * Show the blog.blade.php page when called
+     */
+    public function show()
+    {
         return view('blog');
     }
 }

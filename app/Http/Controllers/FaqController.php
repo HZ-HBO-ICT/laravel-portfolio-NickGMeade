@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class FaqController
+class FaqController extends Controller
 {
-    public function show() {
+    /**
+     * Show the faq.blade.php page when called
+     */
+    public function show()
+    {
         return view('faq');
     }
 }

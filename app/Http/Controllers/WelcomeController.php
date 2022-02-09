@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function show() {
+    /**
+     * Show the welcome.blade.php page when called
+     */
+    public function show()
+    {
         return view('welcome');
     }
 }
