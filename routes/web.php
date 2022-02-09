@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +33,8 @@ Route::get('/posts/{post}', function ($post) {
     ]);
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/profile', [ProfileController::class, 'show']);
+Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/faq', [FaqController::class, 'show']);
+Route::get('/blog', [BlogController::class, 'show']);
