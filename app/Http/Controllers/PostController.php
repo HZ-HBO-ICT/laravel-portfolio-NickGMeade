@@ -9,7 +9,8 @@ class PostController extends Controller
 {
     /**
      * @param $slug - the wildcard to compare with the DBs data
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View - the view of the post page
+     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View - the Post view
      */
     public function show($slug)
     {
