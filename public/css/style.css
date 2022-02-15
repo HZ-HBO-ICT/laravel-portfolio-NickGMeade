@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
 		margin: 0;
-		padding: 0;	
+		padding: 0;
 }
 @font-face {
 	font-family: 'UncialAntiqua-9mR7';
@@ -14,11 +14,11 @@ html {
 h1 {
 	font-family: UncialAntiqua-9mR7;
 	font-weight: normal;
-}	
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #fff;
-}	
+}
 header {
 	text-align: center;
 	font-size: 36px;
@@ -38,20 +38,20 @@ figcaption {
 }
 figcaption .menu {
 	width: 30%;
-	margin-left: 1em;	
+	margin-left: 1em;
 }
 .logo {
 	float: left;
 	padding: 15px 5px 5px 15px;
 	height: 100px;
 	width: auto;
-} 
-/* Specific page Header formatting for the FAQ page*/	
+}
+/* Specific page Header formatting for the FAQ page*/
 .faq {
 	font-size: 24px;
 	margin: 1.75em;
 }
-/* Formatting the Navigation bar/links */		
+/* Formatting the Navigation bar/links */
 nav, .cork-places {
 	display: flex;
 	margin: 1em;
@@ -61,7 +61,7 @@ nav, .cork-places {
 	flex-wrap: wrap;
 }
 nav li, .cork-places li {
-	/* Sorting the list horizontally */	
+	/* Sorting the list horizontally */
 	display: inline;
 }
 /* Changing the navigation links into navigation buttons */
@@ -79,9 +79,10 @@ nav a:link, nav a:visited, nav a:hover, .go-back:link, .go-back:hover, .cork-pla
 	border: 1px solid none;
 	border-radius: 10px;
 }
-nav a:hover, nav .active, .dropdown-content a:hover, .go-back:hover, .cork-places a:hover {
+nav a:hover, nav a.current_page, .dropdown-content a:hover, .go-back:hover, .cork-places a:hover {
 	color: #000;
-	background-color: #80b918;
+	background-color: #FFF;
+    border: 2px solid #000;
 }
 .cork-places{
 	font-size: 100%;
@@ -370,7 +371,7 @@ article li {
 	border: 2px solid #c7eea6;
 }
 .blog-post, .blog-link:hover {
-	background-color: #fff;	
+	background-color: #fff;
 }
 .blog-link:hover {
 	border: 2px solid black;
@@ -472,7 +473,7 @@ footer {
 		grid-template-columns: 50% 50%;
 		grid-template-rows: auto auto 33%;
 		grid-template-areas:
-		"index-content index-content" 
+		"index-content index-content"
 		"index-content2 index-content2"
 		"cork-img middelburg-img";
 	}
@@ -512,8 +513,8 @@ footer {
 		grid-template-columns: 100%;
 		grid-template-rows: auto auto 25% 25%;
 		grid-template-areas:
-		"index-content" 
-		"index-content2" 
+		"index-content"
+		"index-content2"
 		"cork-img"
 		"middelburg-img";
 	}
@@ -523,9 +524,9 @@ footer {
 		grid-template-rows: repeat(5, auto);
 		grid-template-areas:
 		"about-me"
-		"about-cork" 
+		"about-cork"
 		"cork-map"
-		"hobbies" 
+		"hobbies"
 		"lvo-display"
 	}
 }
