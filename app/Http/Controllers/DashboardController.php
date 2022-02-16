@@ -23,6 +23,11 @@ class DashboardController extends Controller
 
         $progress = ($currentECs/60)*100;
 
-        return view('dashboard', ['currentECs' => $currentECs, 'grades' => $grades, 'progress' => $progress, 'previousQuartile' => $previousQuartile]);
+        return view('dashboard', [
+            'currentECs' => $currentECs,
+            'grades' => $grades,
+            'progress' => $progress,
+            'previousQuartile' => $previousQuartile
+        ]);
     }
 }

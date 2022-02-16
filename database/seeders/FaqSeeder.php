@@ -26,7 +26,8 @@ class FaqSeeder extends Seeder
                                     printer listed, connect to that
                                     printer and select it when printing your documents.
                                 </br></br>
-                                    The second is to go to <a href="https://print.hz.nl/" target="_blank"> print.hz.nl</a>
+                                    The second is to go to
+                                    <a href="https://print.hz.nl/" target="_blank"> print.hz.nl</a>
                                     and log in with your HZ logins (not your HZ email, only the details
                                     before the &#64; symbol)
                                 </br></br>
@@ -35,12 +36,12 @@ class FaqSeeder extends Seeder
                                     advanced printer settings.
                                 </br></br>
                                     Finally, go to the printer on your floor (next to the coffee machines)
-                                    and scan your student card against the terminal and select ""Print"", follow the
-                                    steps on screen to print your document.
+                                    and scan your student card against the terminal and select ""Print"", follow
+                                    the steps on screen to print your document.
                                 </br></br>
-                                    Just remember, you will need to have funds on your student card as you will before
-                                    charged per page. The price varies on the print-type but will be listed on the terminal before
-                                    you confirm the print request.',
+                                    Just remember, you will need to have funds on your student card as you will
+                                    before charged per page. The price varies on the print-type but will be
+                                    listed on the terminal before you confirm the print request.',
                 'link' => null,
                 'class' => 'box yellow',
                 'created_at' => Carbon::now(),
@@ -66,19 +67,24 @@ class FaqSeeder extends Seeder
                 'answer' => '</br>
                                     Your health should always be your first priority!
                                 </br></br>
-                                    If you are feeling unwell and/or believe you are showing symptoms similar to those of
-                                    the coronavirus then you should stay at home and follow these steps:</br></br>
+                                    If you are feeling unwell and/or believe you are showing symptoms similar to
+                                    those of the coronavirus then you should stay at home and follow
+                                    these steps:
+                                    </br></br>
                                     <ul>
-                                        <li>Stay at home and make an appointment for a free corona test, by calling 1202
-                                        or online via
-                                        <a href="https://coronatest.nl/?utm_medium=email&_hsmi=2&_hsenc=p2ANqtz-9hAgqvNZOw3Y13rfugPz8K-l0jxoZf5XS4-HGHRbpyfbIr_OCTXx_vi4kZZfgjtWVdpLl0K1dPHzBn7wcDWtZqWYn_hw&utm_content=2&utm_source=hs_email" target="_blank">coronatest.nl</a> </li>
+                                        <li>Stay at home and make an appointment for a free corona test, by
+                                        calling 1202 or online via
+                                        <a href="https://coronatest.nl/" target="_blank">coronatest.nl</a> </li>
                                         </br>
                                         Contact HZ and let them know that you may have the virus.</li>
                                         </br></br>
                                         <li>If you are a student, email your study program coordinator.</li>
-                                        <li>If you are an international student then also inform the International Office at
-                                        <a href="mailto:internationaloffice@hz.nl">internationaloffice@hz.nl</a>.</li>
-                                        <li>If you are a member of staff then report it directly to your manager, via email.</li>
+                                        <li>If you are an international student then also inform the International
+                                        Office at
+                                        <a href="mailto:internationaloffice@hz.nl">internationaloffice@hz.nl</a>
+                                        .</li>
+                                        <li>If you are a member of staff then report it directly to your manager,
+                                        via email.</li>
                                     </ul>',
                 'link' => null,
                 'class' => 'box pink',
@@ -106,13 +112,14 @@ class FaqSeeder extends Seeder
                 'answer' => '</br>
                                     Unfortunately it is not possible directly at the HZ building in Middelburg
                                     (excluding 2 disabled parking spaces next to the building),
-                                    however there is free parking available at the PZEM building\'s car park across the way,
-                                    at Poelendaelesingel 10. This is only about a 5 - 10 minutes walk from campus.
+                                    however there is free parking available at the PZEM building\'s car park
+                                    across the way, at Poelendaelesingel 10. This is only about a
+                                    5 - 10 minutes walk from campus.
                                 </p>
                                 </br>
                                 <p>
-                                    Please note that the tunnel connecting PEZM to HZ is currently blocked due to the
-                                    ongoing construction of the Joint Research Center Zeeland.
+                                    Please note that the tunnel connecting PEZM to HZ is currently blocked due
+                                    to the ongoing construction of the Joint Research Center Zeeland.
                                     However, there is a pedestrian crossing a few meters away at the intersection.',
                 'link' => null,
                 'class' => 'box blue',
