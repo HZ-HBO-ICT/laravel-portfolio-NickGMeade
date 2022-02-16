@@ -25,5 +25,4 @@ class DashboardController extends Controller
 
         return view('dashboard', ['currentECs' => $currentECs, 'grades' => $grades, 'progress' => $progress, 'previousQuartile' => $previousQuartile]);
     }
-
 }

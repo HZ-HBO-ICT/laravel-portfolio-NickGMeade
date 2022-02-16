@@ -36,7 +36,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -44,7 +44,7 @@ class BlogController extends Controller
      */
     public function store()
     {
-
+        //
     }
 
     /**
@@ -52,7 +52,7 @@ class BlogController extends Controller
      */
     public function edit()
     {
-
+        //
     }
 
     /**
@@ -60,7 +60,7 @@ class BlogController extends Controller
      */
     public function update()
     {
-
+        //
     }
 
     /**
@@ -68,6 +68,6 @@ class BlogController extends Controller
      */
     public function destroy()
     {
-
+        //
     }
 }
