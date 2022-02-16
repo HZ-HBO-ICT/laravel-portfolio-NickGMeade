@@ -6,7 +6,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +22,6 @@ Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/faq', [FaqController::class, 'show']);
-Route::get('/blog', [BlogController::class, 'show']);
-Route::get('/posts/{post}', [PostController::class, 'show']);
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blogs/{article}', [BlogController::class, 'show']);
+

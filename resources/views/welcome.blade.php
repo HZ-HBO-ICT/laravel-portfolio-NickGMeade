@@ -51,6 +51,20 @@
                     </p>
                     </br>
                 </div>
+                <div class="articles" style="width: 90%">
+                    <br><hr><br>
+                        @foreach($articles as $article)
+                        <a href="/blogs/{{$article->link}}">
+                            <li class="blog-post blog-link">
+                                <h3>{{$article->title}}</h3>
+                                <h4>{{Str::limit($article->created_at, 10)}}</h4>
+                                <p>{{$article->excerpt}}</p>
+                            </li>
+                        </a>
+                        <br><hr><br>
+                        @endforeach
+                    </ul>
+                </div>
                 <div class="cork-img"><img src="resources\images\cork-view.jpg" alt="Cork View"></div>
                 <div class="index-content2">
                     <h2>But why choose ICT at HZ, why leave a full-time career to pursue full-time study in a different country?</h2>

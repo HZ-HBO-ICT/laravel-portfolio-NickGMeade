@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class WelcomeController extends Controller
 {
@@ -11,6 +12,8 @@ class WelcomeController extends Controller
      */
     public function show()
     {
-        return view('welcome');
+        return view('welcome', [
+            'articles' => Article::take(3)->latest()->get()
+        ]);
     }
 }

@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
-use Illuminate\Http\Request;
+use App\Models\Article;
 
-class PostController extends Controller
+class BlogPostController extends Controller
 {
     /**
      * @param $slug - the wildcard to compare with the DBs data
      * @return \Illuminate\Contracts\Foundation\Application
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View - the Post view
      */
-    public function show($slug)
+    public function show($id)
     {
-        return view('post', [
-            'post' => Post::where('slug', $slug)->firstOrFail()
-        ]);
+        $article = Article::find($id);
+
+        return view('blogs.show', ['article' => $article]);
     }
 }

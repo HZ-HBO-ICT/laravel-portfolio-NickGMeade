@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Incorporating the external style sheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Nick Meade - @yield('title')</title>
 </head>
 
@@ -16,8 +16,8 @@
             <div class="dropdown">
                 <button class="dropbtn">
                     <figure>
-                        <img class="logo" src="resources/images/hz-logo.png" alt="HZ Logo">
-                        <figcaption><img class="menu" src="resources/images/menu.png"></figcaption>
+                        <img class="logo" src="/resources/images/hz-logo.png" alt="HZ Logo">
+                        <figcaption><img class="menu" src="/resources/images/menu.png"></figcaption>
                     </figure>
                 </button>
                 <div class="dropdown-content">
@@ -42,12 +42,11 @@
         <!-- Navigation Bar -->
         <nav>
             <ul>
-
                 <li><a class="{{ Request::path() === '/' ? 'current_page' : '' }}" href="/">Home</a></li>
-                <li><a class="{{ Request::path() === 'profile' ? 'current_page' : '' }}" href="profile">Profile</a></li>
-                <li><a class="{{ Request::path() === 'dashboard' ? 'current_page' : '' }}" href="dashboard">Dashboard</a></li>
-                <li><a class="{{ Request::path() === 'faq' ? 'current_page' : '' }}" href="faq">FAQ </a></li>
-                <li><a class="{{ Request::path() === 'blog' ? 'current_page' : '' }}" class="current_page" href="blog">Blog</a></li>
+                <li><a class="{{ Request::path() === 'profile' ? 'current_page' : '' }}" href="/profile">Profile</a></li>
+                <li><a class="{{ Request::path() === 'dashboard' ? 'current_page' : '' }}" href="/dashboard">Dashboard</a></li>
+                <li><a class="{{ Request::path() === 'faq' ? 'current_page' : '' }}" href="/faq">FAQ </a></li>
+                <li><a class="{{ Request::path() === 'blog' ? 'current_page' : '' }}" href="/blog">Blog</a></li>
             </ul>
         </nav>
     </div>
