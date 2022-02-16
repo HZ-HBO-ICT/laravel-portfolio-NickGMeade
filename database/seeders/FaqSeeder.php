@@ -46,8 +46,8 @@ class FaqSeeder extends Seeder
                 'class' => 'box yellow',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
+                ],
+                [
                 'question' => 'How can you scan documents at HZ?',
                 'answer' => '</br>
                                     To scan a document, go to the printers on any floor and tap your
@@ -61,8 +61,8 @@ class FaqSeeder extends Seeder
                 'class' => 'box blue',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
+                ],
+                [
                 'question' => 'What should you do when you are feeling unwell/ are showing symptoms of Coronavirus?',
                 'answer' => '</br>
                                     Your health should always be your first priority!
@@ -90,8 +90,8 @@ class FaqSeeder extends Seeder
                 'class' => 'box pink',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
+                ],
+                [
                 'question' => 'How can you book a project space in the building?',
                 'answer' => '</br>
                                     You can book a meeting room on campus by logging into the Service Portal in
@@ -106,8 +106,8 @@ class FaqSeeder extends Seeder
                 'class' => 'box yellow',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
+                ],
+                [
                 'question' => 'What do I need to do to park my car at HZ?',
                 'answer' => '</br>
                                     Unfortunately it is not possible directly at the HZ building in Middelburg
@@ -125,7 +125,7 @@ class FaqSeeder extends Seeder
                 'class' => 'box blue',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ]
+                ]
         ]);
     }
 }
