@@ -16,7 +16,7 @@
         <div class="container">
             @foreach($posts as $post)
                 <div class="{{$post->class}}">
-                    <h3>{{$post->question}}</h3>
+                    <h3>{{$post->id}}) {{$post->question}}</h3>
                     <p>
                         <!-- The !! symbols remove the html special characters
                              restriction imposed by echo, letting me use the html

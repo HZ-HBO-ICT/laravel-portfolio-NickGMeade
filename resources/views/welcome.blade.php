@@ -54,7 +54,7 @@
                 <div class="articles" style="width: 90%">
                     <br><hr><br>
                         @foreach($articles as $article)
-                        <a href="/blogs/{{$article->link}}">
+                        <a href="/blogs/{{$article->id}}">
                             <li class="blog-post blog-link">
                                 <h3>{{$article->title}}</h3>
                                 <h4>{{Str::limit($article->created_at, 10)}}</h4>

@@ -21,7 +21,13 @@ use App\Http\Controllers\BlogController;
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
-Route::get('/faq', [FaqController::class, 'show']);
+Route::get('/faq', [FaqController::class, 'index']);
+Route::post('/faq', [FaqController::class, 'store']);
+Route::get('/faq/create', [FaqController::class, 'create']);
 Route::get('/blog', [BlogController::class, 'index']);
+Route::post('/blog', [BlogController::class, 'store']);
+Route::get('/blog/create', [BlogController::class, 'create']);
 Route::get('/blogs/{article}', [BlogController::class, 'show']);
+
+
 

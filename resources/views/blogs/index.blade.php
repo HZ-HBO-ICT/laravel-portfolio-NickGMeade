@@ -16,7 +16,7 @@
     @foreach($articles as $article)
         <div class="blog-post blog-link">
             <div class="blog-title">
-                <a href="/blogs/{{$article->link}}">
+                <a href="/blogs/{{$article->id}}">
                     <h2>{{$article->title}}</h2>
                     <h3>{{Str::limit($article->created_at, 10)}}</h3>
                 </a>
@@ -24,7 +24,7 @@
             <p>
                 {!! $article->excerpt !!}
                 </br>
-                <a href="..">Read More</a>
+                <a href="/blogs/{{$article->id}}">Read More</a>
             </p>
         </div>
         </br>

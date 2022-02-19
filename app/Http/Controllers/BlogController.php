@@ -11,9 +11,11 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $article = Article::latest()->get();
+//        $article = Article::latest()->get();
 
-        return view('blog', ['articles' => $article]);
+        $article = Article::latest()->paginate(10);
+
+        return view('blogs.index', ['articles' => $article]);
     }
 
     /**
@@ -25,7 +27,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $article = Article::where('link', $id);
+        $article = Article::where('id', $id);
 
         return view('blogs.show', ['article' => $article->firstOrFail()
         ]);
@@ -36,7 +38,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs.create');
     }
 
     /**
@@ -44,7 +46,16 @@ class BlogController extends Controller
      */
     public function store()
     {
-        //
+        $blogPost = new Article();
+
+        $blogPost->title = request('title');
+        $blogPost->excerpt = request('excerpt');
+        $blogPost->body = request('body');
+        $blogPost->link = request('link');
+
+        $blogPost->save();
+
+        return redirect('/blog');
     }
 
     /**
