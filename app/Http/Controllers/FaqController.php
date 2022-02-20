@@ -22,7 +22,7 @@ class FaqController extends Controller
      */
     public function show()
     {
-        //
+        // Nothing to see here!
     }
 
     /**
@@ -53,24 +53,39 @@ class FaqController extends Controller
     /**
      * Show a view to edit a resource
      */
-    public function edit()
+    public function edit($id)
     {
-        //
+        $faqPost = Faq::find($id);
+
+        return view('faqs.edit', ['faqPost' => $faqPost]);
     }
 
     /**
      * Persist the edited resource
      */
-    public function update()
+    public function update($id)
     {
-        //
+        $faqPost = Faq::find($id);
+
+        $faqPost->question = request('question');
+        $faqPost->answer = request('answer');
+        // This grabs the value of the radio button so the code can read it
+        $faqPost->class = $_POST['class_type'];
+
+        $faqPost->save();
+
+        return redirect('/faq');
     }
 
     /**
      * Destroy/remove a resource
      */
-    public function destroy()
+    public function destroy($id)
     {
-        //
+        $faqPost = Faq::find($id);
+
+        $faqPost->delete();
+
+        return redirect('/faq');
     }
 }

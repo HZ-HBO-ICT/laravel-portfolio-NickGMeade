@@ -6,6 +6,9 @@
     <!-- Incorporating the external style sheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Nick Meade - @yield('title')</title>
+
+    @yield('style')
+
 </head>
 
 <body>

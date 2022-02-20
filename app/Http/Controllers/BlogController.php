@@ -61,24 +61,38 @@ class BlogController extends Controller
     /**
      * Show a view to edit a resource
      */
-    public function edit()
+    public function edit($id)
     {
-        //
+        $blogPost = Article::find($id);
+
+        return view('blogs.edit', ['article' => $blogPost]);
     }
 
     /**
      * Persist the edited resource
      */
-    public function update()
+    public function update($id)
     {
-        //
+        $blogPost = Article::find($id);
+
+        $blogPost->title = request('title');
+        $blogPost->excerpt = request('excerpt');
+        $blogPost->body = request('body');
+
+        $blogPost->save();
+
+        return redirect('/blogs/' . $blogPost->id);
     }
 
     /**
      * Destroy/remove a resource
      */
-    public function destroy()
+    public function destroy($id)
     {
-        //
+        $blogPost = Article::find($id);
+
+        $blogPost->delete();
+
+        return redirect('/blog');
     }
 }
