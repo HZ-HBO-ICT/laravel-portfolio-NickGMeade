@@ -17,10 +17,10 @@
 @endsection
 
 @section ('content')
-    <!-- Blog Form -->
+    <!-- Blog Form for the Article pages-->
     <h2>Update Blog Post</h2>
     <br>
-    <form action="/blogs/{{$article->id}}" method="POST">
+    <form action="{{route('articles.update', $article)}}" method="POST">
         @csrf
         @method('PUT')
 
@@ -76,7 +76,7 @@
                           id="link"
                           placeholder="E.g., My-Post-1"
                           class="@error('link') is-danger @enderror"
-                          disabled>{{$article->link}}</textarea>
+                          >{{$article->link}}</textarea>
 
                 @error('link')
                 <p class="is-danger-text">{{$errors->first('link')}}</p>
@@ -86,7 +86,7 @@
         <br>
         <button type="submit"><h3>Submit</h3></button>
     </form>
-    <form method="POST" action="/blogs/{{$article->id}}">
+    <form method="POST" action="{{route('articles.destroy', $article)}}">
         @csrf
         @method('DELETE')
         <button id="deleteBtn" type="submit"><h3>Delete</h3></button>
