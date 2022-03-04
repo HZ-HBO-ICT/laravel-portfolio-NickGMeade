@@ -471,6 +471,16 @@ footer {
 	font-size: 14px;
 	clear: both;
 }
+
+.is-danger {
+    background-color: #ffe9ee;
+    border: 1px red solid;
+}
+
+.is-danger-text {
+    color: red;
+}
+
 /* Adjusting layouts for smaller screen sizes */
 @media (max-width: 1200px){
 	main {

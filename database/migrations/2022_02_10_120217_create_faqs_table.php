@@ -18,7 +18,7 @@ class CreateFaqsTable extends Migration
             $table->string('question');
             $table->text('answer');
             $table->string('link')->nullable();
-            $table->string('class');
+            $table->string('class')->default('box yellow');
             $table->timestamps();
         });
     }

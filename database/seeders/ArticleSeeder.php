@@ -83,7 +83,7 @@ class ArticleSeeder extends Seeder
                 'title' => 'All the coding languages I\'ve tried before',
                 'excerpt' => 'Over the years I was able to try my hand at multiple coding languages,
                 here\'s a few of them. ',
-                'body' => '"<p>
+                'body' => '<p>
                             Over the years I was able to try my hand at multiple coding languages to varying degrees.
                             While some may not be remembered as well as others, all of these played their part in the
                             development of how I view and approach tasks.

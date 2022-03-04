@@ -15,10 +15,8 @@
 @section ('content')
     <div class="blog-post">
         <div class="blog-title">
-            <a href="/blogs/{{$article->id}}">
-                <h2>{{$article->title}}</h2>
-                <h3>{{Str::limit($article->created_at, 10)}}</h3>
-            </a>
+            <h2>{{$article->title}}</h2>
+            <h3>{{Str::limit($article->created_at, 10)}}</h3>
         </div>
         <p>
             {!! $article->body !!}

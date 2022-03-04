@@ -49,7 +49,7 @@
                 <li><a class="{{ Request::path() === 'profile' ? 'current_page' : '' }}" href="/profile">Profile</a></li>
                 <li><a class="{{ Request::path() === 'dashboard' ? 'current_page' : '' }}" href="/dashboard">Dashboard</a></li>
                 <li><a class="{{ Request::path() === 'faq' ? 'current_page' : '' }}" href="/faq">FAQ </a></li>
-                <li><a class="{{ Request::path() === 'blog' ? 'current_page' : '' }}" href="/blog">Blog</a></li>
+                <li><a class="{{ Request::path() === 'articles' ? 'current_page' : '' }}" href="/articles">Blog</a></li>
             </ul>
         </nav>
     </div>

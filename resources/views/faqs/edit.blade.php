@@ -20,21 +20,21 @@
     <!-- FAQ Form -->
     <h2>Create a new FAQ Post</h2>
     <br>
-    <form action="/faq/{{$faqPost->id}}" method="POST">
+    <form action="{{route('faq.update', $faq)}}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="field">
             <label for="question"><h3>Question</h3></label>
             <div>
-                <textarea type="text" id="question" name="question">{{$faqPost->question}}</textarea>
+                <textarea type="text" id="question" name="question">{{$faq->question}}</textarea>
             </div>
         </div>
         <br>
         <div class="field">
             <label for="answer"><h3>Answer</h3></label>
             <div>
-                <textarea name="answer" id="answer" rows="5" cols="50">{{$faqPost->answer}}</textarea>
+                <textarea name="answer" id="answer" rows="5" cols="50">{{$faq->answer}}</textarea>
             </div>
         </div>
         <br>
@@ -52,7 +52,7 @@
         <br>
         <button type="submit"><h3>Submit</h3></button>
     </form>
-    <form method="POST" action="/faq/{{$faqPost->id}}">
+    <form method="POST" action="{{route('faq.destroy', $faq)}}">
         @csrf
         @method('DELETE')
         <button id="deleteBtn" type="submit"><h3>Delete</h3></button>

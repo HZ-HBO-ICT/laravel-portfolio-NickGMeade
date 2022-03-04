@@ -54,7 +54,7 @@
                 <div class="articles" style="width: 90%">
                     <br><hr><br>
                         @foreach($articles as $article)
-                        <a href="/blogs/{{$article->id}}">
+                        <a href="{{route('articles.show', $article)}}">
                             <li class="blog-post blog-link">
                                 <h3>{{$article->title}}</h3>
                                 <h4>{{Str::limit($article->created_at, 10)}}</h4>
@@ -89,9 +89,9 @@
                         field and what better way to acquaint myself with the world of ICT than to immerse myself into a new culture and connect with students
                         from many differing backgrounds, but all sharing the same plans of delving into ICT.
                         </br></br>
-                        If you would like to know more about <a href="blog/why-choose-ict.html" target="_blank">why ICT caught my interest</a>, or even <a href="blog/who-am-i.html" target="_blank">
+                        If you would like to know more about <a href="articles/103" target="_blank">why ICT caught my interest</a>, or even <a href="articles/106" target="_blank">
                             my brief thoughts and musings about being an "Adult Learner"</a> in	an environment where many of my fellow learners range from 8 to 15 years
-                        younger than me, I have added (and in future will look at expanding upon) some <a href="blog.html" target="_blank">Blog posts</a> which go into a bit more detail
+                        younger than me, I have added (and in future will look at expanding upon) some <a href="/articles" target="_blank">Blog posts</a> which go into a bit more detail
                         (or as some would say, where I take you for a wander through said topics!).
                     </p>
                     </br>

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Render a list of a resource
@@ -13,7 +14,7 @@ class BlogController extends Controller
     {
         $article = Article::latest()->paginate(10);
 
-        return view('blogs.index', ['articles' => $article]);
+        return view('articles.index', ['articles' => $article]);
     }
 
     /**
@@ -23,9 +24,9 @@ class BlogController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View - the Post view
      */
-    public function show(Article $blog)
+    public function show(Article $article)
     {
-        return view('blogs.show', ['article' => $blog]);
+        return view('articles.show', ['article' => $article]);
     }
 
     /**
@@ -33,55 +34,56 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blogs.create');
+        return view('articles.create');
     }
 
     /**
      * Store/Persist a new resource
      */
-    public function store()
+    public function store(Request $request)
     {
-        Article::create($this->validateArticle());
+        Article::create($this->validateArticle($request));
 
-        return redirect('/blog');
+        return redirect(route('articles.index'));
     }
 
     /**
      * Show a view to edit a resource
      */
-    public function edit(Article $blog)
+    public function edit(Article $article)
     {
-        return view('blogs.edit', ['article' => $blog]);
+        return view('articles.edit', ['article' => $article]);
     }
 
     /**
      * Persist the edited resource
      */
-    public function update(Article $blog)
+    public function update(Article $article, Request $request)
     {
-        $blog->update($this->validateArticle());
+        $article->update($this->validateArticle($request));
 
-        return redirect('/blogs/' . $blog->id);
+        return redirect(route('articles.show', $article));
     }
 
     /**
      * Destroy/remove a resource
      */
-    public function destroy(Article $blog)
+    public function destroy(Article $article)
     {
-        $blog->delete();
+        $article->delete();
 
-        return redirect('/blog');
+        return redirect(route('articles.index'));
     }
 
     /**
      * Validate the inputs when creating/updating a blog post
      *
+     * @param $request
      * @return array
      */
-    public function validateArticle(): array
+    public function validateArticle($request): array
     {
-        return request()->validate([
+        return $request->validate([
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required',

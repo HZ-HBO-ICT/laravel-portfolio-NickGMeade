@@ -20,7 +20,7 @@
     <!-- Blog Form -->
     <h2>Create a new Blog Post</h2>
     <br>
-    <form action="/blog" method="POST">
+    <form action="{{route('articles.store')}}" method="POST">
         @csrf
         <div class="field">
             <label for="title"> <h3>Title</h3> </label>

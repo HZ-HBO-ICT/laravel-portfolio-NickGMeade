@@ -14,7 +14,7 @@
 
 @section('content')
         <div class="container">
-            @foreach($posts as $post)
+            @foreach($faqs as $post)
                 <div class="{{$post->class}}">
                     <h3>{{$post->id}}) {{$post->question}}</h3>
                     <p>

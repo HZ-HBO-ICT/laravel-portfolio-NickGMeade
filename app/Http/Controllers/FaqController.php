@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
@@ -11,18 +12,11 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $posts = Faq::all();
+        $faq = Faq::all();
 
         return view('faqs.index', [
-            'posts' => $posts
+            'faqs' => $faq
         ]);
-    }
-    /**
-     * Show the faq.blade.php page when called
-     */
-    public function show()
-    {
-        // Nothing to see here!
     }
 
     /**
@@ -36,56 +30,55 @@ class FaqController extends Controller
     /**
      * Store/Persist a new resource
      */
-    public function store()
+    public function store(Request $request)
     {
-        $faqPost = new Faq();
+        Faq::create($this->validateFaq($request));
+        // Faq::update($this->class = $_POST['class_type']);
+        // TOFIX - $this->class = $_POST['class_type'];
+        // Get the code to recognise the change in colour for the faq radio button
 
-        $faqPost->question = request('question');
-        $faqPost->answer = request('answer');
-        // This grabs the value of the radio button so the code can read it
-        $faqPost->class = $_POST['class_type'];
-
-        $faqPost->save();
-
-        return redirect('/faq');
+        return redirect(route('faq.index'));
     }
 
     /**
      * Show a view to edit a resource
      */
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faqPost = Faq::find($id);
-
-        return view('faqs.edit', ['faqPost' => $faqPost]);
+        return view('faqs.edit', ['faq' => $faq]);
     }
 
     /**
      * Persist the edited resource
      */
-    public function update($id)
+    public function update(Faq $faq, Request $request)
     {
-        $faqPost = Faq::find($id);
+        $faq->update($this->validateFaq($request));
+        // TOFIX - $this->class = $_POST['class_type'];
+        // Get the code to recognise the change in colour for the faq radio button
 
-        $faqPost->question = request('question');
-        $faqPost->answer = request('answer');
-        // This grabs the value of the radio button so the code can read it
-        $faqPost->class = $_POST['class_type'];
-
-        $faqPost->save();
-
-        return redirect('/faq');
+        return redirect(route('faq.index'));
     }
 
     /**
      * Destroy/remove a resource
      */
-    public function destroy($id)
+    public function destroy(Faq $faq)
     {
-        $faqPost = Faq::find($id);
+        $faq->delete();
 
-        $faqPost->delete();
+        return redirect(route('faq.index'));
+    }
 
-        return redirect('/faq');
+    /**
+     * Validate the inputs when creating/updating the blog
+     * @return void
+     */
+    public function validateFaq($request): array
+    {
+        return $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
     }
 }
