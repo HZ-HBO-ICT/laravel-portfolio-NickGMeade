@@ -9,6 +9,8 @@ class Grade extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     /**
      * Function to accept a grade and add it to the database
      *

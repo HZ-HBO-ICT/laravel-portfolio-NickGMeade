@@ -4,6 +4,10 @@
     Dashboard
 @endsection
 
+@section('style')
+    <link rel="stylesheet" type="text/css" href="/css/formStyle.css" />
+@endsection
+
 @section('header')
     Dashboard
 @endsection
@@ -16,23 +20,34 @@
     <!-- For updating the grade's colour index, use the classes 'completed', 'inprogress' or 'incomplete' -->
     <!-- Unused cells & tables are currently hidden, to unhide any relevant cells remove the 'hidden' and 'hidden' classes -->
     <!-- Quartile #1 Table Start -->
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     <table>
         <thead>
         <tr>
-            <th colspan="5"><h2>Study Progress 2021/22</h2></th>
+            <th colspan="6"><h2>Study Progress 2021/22</h2>
+                <form method="GET" action="{{route('grade.create')}}">
+                    @csrf
+                    <button id="new" type="submit"><h3>Add Grade</h3></button>
+                </form>
+            </th>
         </tr>
         @foreach($grades as $grade)
             @if($previousQuartile !== $grade->quartile)
                 @php $previousQuartile = $grade->quartile @endphp
                         <tr>
-                            <th colspan="5"> {{$grade->quartile}}</th>
+                            <th colspan="6">Quartile: {{$grade->quartile}}</th>
                         </tr>
                         <tr>
                             <th>Course</th>
-                            <th>EC</th>
                             <th>Exam</th>
+                            <th>EC</th>
                             <th>Status</th>
                             <th>Grade</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +60,8 @@
                                 <td class='{{$grade->class}}'>
                                     @if($grade->class === 'completed')
                                         Completed
+                                    @elseif($grade->class === 'incomplete')
+                                        Unsuccessful
                                     @else
                                         In Progress
                                     @endif
@@ -55,6 +72,17 @@
                                     @else
                                         0
                                     @endif
+                                </td>
+                                <td>
+                                    <form method="GET" action="{{route('grade.edit', $grade)}}">
+                                        @csrf
+                                        <button id="edit" type="submit"><h3>Edit</h3></button>
+                                    </form>
+                                    <form method="POST" action="{{route('grade.destroy', $grade)}}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button id="deleteBtn" type="submit"><h3>Delete</h3></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endif

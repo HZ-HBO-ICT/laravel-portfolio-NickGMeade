@@ -22,7 +22,7 @@ class CreateGradesTable extends Migration
             so average calculations can be applied');
             $table->decimal('ec');
             $table->decimal('best_grade')->nullable();
-            $table->string('class');
+            $table->string('class')->default('inprogress');
             $table->date('passed_at')->nullable();
             $table->timestamps();
         });

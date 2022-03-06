@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
-Route::get('/dashboard', [DashboardController::class, 'show']);
+// Route::get('/dashboard', [DashboardController::class, 'show']);
 
 // Routing for the FAQ page
 Route::resource('/faq', FaqController::class)->except(['show']);
@@ -28,3 +29,5 @@ Route::resource('/faq', FaqController::class)->except(['show']);
 // Routing for the Blog pages
 Route::resource('/articles', ArticleController::class);
 
+// Routing for the Grades
+Route::resource('/grade', GradeController::class);

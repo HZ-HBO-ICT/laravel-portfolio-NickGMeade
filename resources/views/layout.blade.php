@@ -43,11 +43,11 @@
     </div>
     <div class="nav">
         <!-- Navigation Bar -->
-        <nav>
+        <nav id="navbar">
             <ul>
                 <li><a class="{{ Request::path() === '/' ? 'current_page' : '' }}" href="/">Home</a></li>
                 <li><a class="{{ Request::path() === 'profile' ? 'current_page' : '' }}" href="/profile">Profile</a></li>
-                <li><a class="{{ Request::path() === 'dashboard' ? 'current_page' : '' }}" href="/dashboard">Dashboard</a></li>
+                <li><a class="{{ Request::path() === 'grade' ? 'current_page' : '' }}" href="/grade">Dashboard</a></li>
                 <li><a class="{{ Request::path() === 'faq' ? 'current_page' : '' }}" href="/faq">FAQ </a></li>
                 <li><a class="{{ Request::path() === 'articles' ? 'current_page' : '' }}" href="/articles">Blog</a></li>
             </ul>
@@ -59,6 +59,7 @@
             <article>
                 @yield('content')
             </article>
+{{--            @yield('paginate')--}}
         </main>
     </div>
     <div class="footer">

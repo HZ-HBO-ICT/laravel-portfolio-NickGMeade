@@ -30,3 +30,7 @@
         </br>
     @endforeach
 @endsection
+
+@section('paginate')
+    {{ $articles->links() }}
+@endsection

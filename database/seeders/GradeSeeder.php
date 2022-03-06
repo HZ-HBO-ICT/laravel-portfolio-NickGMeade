@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
 
 class GradeSeeder extends Seeder
 {
@@ -17,7 +17,7 @@ class GradeSeeder extends Seeder
     {
         DB::table('grades')->insert([
             [
-                'quartile' => 'Quartile #1',
+                'quartile' => '1',
                 'course_name' => 'Programme and Career Orientation',
                 'test_name' => 'Assessment',
                 'lowest_passing_grade' => 5.5,
@@ -29,7 +29,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #1',
+                'quartile' => '1',
                 'course_name' => 'Computer Science Basics',
                 'test_name' => 'Written Exam',
                 'lowest_passing_grade' => 5.5,
@@ -41,7 +41,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #1',
+                'quartile' => '1',
                 'course_name' => 'Programming Basics',
                 'test_name' => 'Case Study',
                 'lowest_passing_grade' => 5.5,
@@ -53,7 +53,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #2',
+                'quartile' => '2',
                 'course_name' => 'Object Orientated Programming',
                 'test_name' => 'Case Study	',
                 'lowest_passing_grade' => 5.5,
@@ -65,7 +65,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #2',
+                'quartile' => '2',
                 'course_name' => 'Object Orientated Programming',
                 'test_name' => 'Project',
                 'lowest_passing_grade' => 5.5,
@@ -77,7 +77,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #3',
+                'quartile' => '3',
                 'course_name' => 'Framework Development 1',
                 'test_name' => 'Case Study',
                 'lowest_passing_grade' => 5.5,
@@ -89,7 +89,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #3',
+                'quartile' => '3',
                 'course_name' => 'Framework Project 1',
                 'test_name' => 'Project',
                 'lowest_passing_grade' => 5.5,
@@ -101,7 +101,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #3',
+                'quartile' => '3',
                 'course_name' => 'Framework Project 1',
                 'test_name' => 'Assessment',
                 'lowest_passing_grade' => 5.5,
@@ -113,7 +113,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #3',
+                'quartile' => '3',
                 'course_name' => 'Framework Project 1',
                 'test_name' => 'Report',
                 'lowest_passing_grade' => 5.5,
@@ -125,7 +125,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #4',
+                'quartile' => '4',
                 'course_name' => 'Framework Project 2',
                 'test_name' => 'Portfolio',
                 'lowest_passing_grade' => 5.5,
@@ -137,7 +137,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #4',
+                'quartile' => '4',
                 'course_name' => 'Framework Project 2',
                 'test_name' => 'Project',
                 'lowest_passing_grade' => 5.5,
@@ -149,7 +149,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Quartile #4',
+                'quartile' => '4',
                 'course_name' => 'Framework Project 2',
                 'test_name' => 'Assessment',
                 'lowest_passing_grade' => 5.5,
@@ -161,7 +161,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Full Year',
+                'quartile' => 'All',
                 'course_name' => 'Personal Professional Development',
                 'test_name' => 'Portfolio',
                 'lowest_passing_grade' => 5.5,
@@ -173,7 +173,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Full Year',
+                'quartile' => 'All',
                 'course_name' => 'IT Personality 1',
                 'test_name' => 'Portfolio',
                 'lowest_passing_grade' => 5.5,
@@ -185,7 +185,7 @@ class GradeSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'quartile' => 'Full Year',
+                'quartile' => 'All',
                 'course_name' => 'IT Personality 2',
                 'test_name' => 'Portfolio',
                 'lowest_passing_grade' => 5.5,

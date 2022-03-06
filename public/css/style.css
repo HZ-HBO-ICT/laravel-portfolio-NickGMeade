@@ -52,7 +52,7 @@ figcaption .menu {
 	margin: 1.75em;
 }
 /* Formatting the Navigation bar/links */
-nav, .cork-places {
+#navbar, .cork-places {
 	display: flex;
 	margin: 1em;
 	text-align: center;
@@ -60,12 +60,12 @@ nav, .cork-places {
 	justify-content: center;
 	flex-wrap: wrap;
 }
-nav li, .cork-places li {
+#navbar li, .cork-places li {
 	/* Sorting the list horizontally */
 	display: inline;
 }
 /* Changing the navigation links into navigation buttons */
-nav a:link, nav a:visited, .go-back, .cork-places a:link, .cork-places a:visited {
+#navbar a:link, #navbar a:visited, .go-back, .cork-places a:link, .cork-places a:visited {
 	display: inline-block;
 	text-decoration: none;
 	font-size: 24px;
@@ -75,14 +75,12 @@ nav a:link, nav a:visited, .go-back, .cork-places a:link, .cork-places a:visited
 	color: #FFF;
 	background-color: #6DA33E;
 }
-nav a:link, nav a:visited, nav a:hover, .go-back:link, .go-back:hover, .cork-places a:link, .cork-places a:visited  {
+#navbar a:link, #navbar a:visited, #navbar a:hover, .go-back:link, .go-back:hover, .cork-places a:link, .cork-places a:visited  {
 	border: 1px solid none;
 	border-radius: 10px;
 }
-nav a:hover, nav a.current_page, .dropdown-content a:hover, .go-back:hover, .cork-places a:hover {
-	color: #000;
-	background-color: #FFF;
-    border: 2px solid #000;
+#navbar a:hover, #navbar a.current_page, .dropdown-content a:hover, .go-back:hover, .cork-places a:hover {
+	background-color: #009edc;
 }
 .cork-places{
 	font-size: 100%;
