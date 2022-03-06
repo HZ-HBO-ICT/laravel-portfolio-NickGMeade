@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}', function ($post) {
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/profile', [ProfileController::class, 'show']);
+// Route::get('/dashboard', [DashboardController::class, 'show']);
 
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
+// Routing for the FAQ page
+Route::resource('/faq', FaqController::class)->except(['show']);
 
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+// Routing for the Blog pages
+Route::resource('/articles', ArticleController::class);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Routing for the Grades
+Route::resource('/grade', GradeController::class);

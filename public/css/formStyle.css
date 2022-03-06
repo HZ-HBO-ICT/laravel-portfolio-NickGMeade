@@ -1,0 +1,54 @@
+input[type=text], input[type=number], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit], button[id=new], button[id=edit] {
+    text-align: center;
+    display: block;
+    width: 50%;
+    background-color: #6DA33E;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+button[id=new] {
+    display: inline-block;
+    width: 23%;
+}
+
+h2 {
+    margin: 10px auto;
+}
+
+button[id=new]:hover, button[id=edit]:hover, button[type=submit]:hover {
+    border: none;
+    color: #fff;
+    background-color: #009edc;
+}
+
+button[id=deleteBtn] {
+    color: black;
+    background-color: #F4D03F;
+}
+
+button[id=deleteBtn]:hover {
+    background-color: #E74C3C;
+}
+
+
