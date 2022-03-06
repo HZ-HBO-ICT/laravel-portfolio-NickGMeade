@@ -17,8 +17,6 @@ class DashboardController extends Controller
             if ($grade->best_grade >= $grade->lowest_passing_grade) {
                 $currentECs = $currentECs + $grade->ec;
                 $grade->class = 'completed';
-            } else {
-
             }
             $previousQuartile = $grade->quartile;
         }
