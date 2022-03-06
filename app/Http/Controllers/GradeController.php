@@ -20,7 +20,7 @@ class GradeController extends Controller
             if ($grade->best_grade >= $grade->lowest_passing_grade) {
                 $currentECs = $currentECs + $grade->ec;
                 $grade->class = 'completed';
-            } else if ($grade->best_grade != 0 && ($grade->best_grade < $grade->lowest_passing_grade)) {
+            } elseif ($grade->best_grade != 0 && ($grade->best_grade < $grade->lowest_passing_grade)) {
                 $grade->class = 'incomplete';
             } else {
                 $grade->class = 'inprogress';
